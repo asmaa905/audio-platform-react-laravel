@@ -1,26 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html {
+  direction: rtl;
+  /* default */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+
+body {
+  font-family: "Changa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media screen and (max-width: 1240px) {
+  .container {
+    width: 90% !important;
+    padding: 0;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media screen and (width < 640px) {
+  .container {
+    width: 90% !important;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.container {
+  width: 90% !important;
+  margin-right: auto;
+  margin-left: auto;
 }
